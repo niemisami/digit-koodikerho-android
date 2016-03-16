@@ -10,11 +10,9 @@ The repository itself will contain a basic Android application which is structur
 
 ##What shall we do?
 1. First of all we'll learn to use Android Studio. It has plenty of great shortcuts and refactoring tools which helps developer to concentrate on thinking the logic rather than typing hundreds of lines of 
-2. Something great
-3. More good things
-4. You know everything
-5. I'll update the list soon
-
+2. Few things about libraries and resource files
+3. Create fragments and communicate with Activity
+4. Something something
 
 ##Android Studio shortkeys 
 [List of all Android Studio shortkeys](https://resources.jetbrains.com/assets/products/intellij-idea/IntelliJIDEA_ReferenceCard.pdf) 
@@ -23,7 +21,7 @@ The repository itself will contain a basic Android application which is structur
 [Key maps with explanations (Win/Linux/Os)](http://www.developerphil.com/android-studio-tips-of-the-day-roundup-1/)
 
 ###Most useful shorkeys 
-Key 	 | Definition
+Key    | Definition
 -------- | ---
 ctrl + / | Comment/uncomment
 ctrl + shift + / | Comment/uncomment with block comment
