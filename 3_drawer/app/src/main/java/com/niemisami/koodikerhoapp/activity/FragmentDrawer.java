@@ -1,4 +1,5 @@
 package com.niemisami.koodikerhoapp.activity;
+
 import android.support.v7.widget.RecyclerView;
 /**
  * Created by Ravi on 29/07/15.
@@ -24,7 +25,6 @@ import com.niemisami.koodikerhoapp.model.NavDrawerItem;
 
 import java.util.ArrayList;
 import java.util.List;
-
 
 
 public class FragmentDrawer extends Fragment {
