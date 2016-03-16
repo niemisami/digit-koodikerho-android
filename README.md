@@ -11,7 +11,7 @@ The repository itself will contain a basic Android application which is structur
 ##What shall we do?
 1. First of all we'll learn to use Android Studio. It has plenty of great shortcuts and refactoring tools which helps developer to concentrate on thinking the logic rather than typing hundreds of lines of 
 2. Few things about libraries and resource files
-3. Create fragments and communicate with Activity
+3. Create application with multiple Fragments on top of one controller Activity
 4. Something something
 
 ##Android Studio shortkeys 
@@ -105,3 +105,4 @@ Here are some of my favorite books and online resources that will get you starte
   * [Android Hive](http://tips.androidhive.info/) High quality tutorials although doesn't have many
   * [Android Arsenal](https://android-arsenal.com/free) Contains huge variety of premade Android libraries and tools. Do not reinvent the wheel. Most of the resources can be installed directly using Gradle inside the Android Studio.
   * [Android Code Style Rules](http://source.android.com/source/code-style.html) Gives you an overview about what are naming conventions and rules in Android 
+  * [Awesome Android UI/UIX Libraries](https://github.com/wasabeef/awesome-android-ui)

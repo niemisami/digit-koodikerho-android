@@ -26,6 +26,8 @@ public class MainFragment extends Fragment {
     public MainFragment() {}
 
 
+    ////////FRAGMENT LIFECYCLE METHODS//////
+//    region
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -44,6 +46,26 @@ public class MainFragment extends Fragment {
 
         return view;
     }
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+    }
 
     @Override
     public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
@@ -54,7 +76,6 @@ public class MainFragment extends Fragment {
     public boolean onOptionsItemSelected(MenuItem item) {
 
         int id = item.getItemId();
-
         switch (id) {
             case R.id.action_settings:
                 Toast.makeText(getActivity().getApplicationContext(), "MenuItem: " + item.getTitle() + " clicked", Toast.LENGTH_SHORT)
@@ -64,4 +85,6 @@ public class MainFragment extends Fragment {
         return false;
 
     }
+
+//    endregion
 }
