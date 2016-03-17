@@ -1,6 +1,7 @@
 package com.niemisami.koodikerhoapp;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
@@ -11,6 +12,8 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Toast;
 
 
@@ -20,14 +23,21 @@ import android.widget.Toast;
 public class MainFragment extends Fragment {
 
     private static final String TAG = MainFragment.class.getSimpleName();
+    public static final String SALASANA = "SALASANA";
+    public static final String NIMI = "NIMI";
 
     private Toolbar mToolBar;
+
+    private Button mStartButton;
+    private EditText mNameView, mPasswordView;
 
     public MainFragment() {}
 
 
     ////////FRAGMENT LIFECYCLE METHODS//////
 //    region
+
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -43,9 +53,36 @@ public class MainFragment extends Fragment {
         mToolBar.setTitle(TAG);
         appCompatActivity.setSupportActionBar(mToolBar);
 
+        initViews(view);
+
+
 
         return view;
     }
+
+    private void initViews(View view) {
+        mNameView = (EditText) view.findViewById(R.id.edit_text_username);
+        mNameView.setHint("Name");
+        mPasswordView = (EditText) view.findViewById(R.id.edit_text_password);
+        mPasswordView.setHint("Password");
+
+        mStartButton = (Button) view.findViewById(R.id.button_start);
+        mStartButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getActivity().getApplicationContext(), getString(R.string.hello_main_fragment), Toast.LENGTH_SHORT)
+                        .show();
+                Intent intent = new Intent(getActivity(), SecondActivity.class);
+
+                String name = mNameView.getText().toString();
+                String password = mPasswordView.getText().toString();
+                intent.putExtra(NIMI, name);
+                intent.putExtra(SALASANA, password);
+                startActivity(intent);
+            }
+        });
+    }
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -72,9 +109,10 @@ public class MainFragment extends Fragment {
         inflater.inflate(R.menu.menu_main, menu);
     }
 
+
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-
         int id = item.getItemId();
         switch (id) {
             case R.id.action_settings:
